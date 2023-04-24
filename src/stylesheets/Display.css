@@ -1,0 +1,10 @@
+#display-screen{
+    background-color: #917FB3;
+    height: 3rem;
+    border-radius: 25px;
+    margin: 30px 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

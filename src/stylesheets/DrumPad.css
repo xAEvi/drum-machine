@@ -1,0 +1,18 @@
+.drum-pad{
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);;
+    background-color: #aaaaaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 25px;
+    user-select: none;
+}
+
+.active{
+    background-color: yellow;
+}

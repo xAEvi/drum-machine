@@ -19,8 +19,8 @@ html{
 #drum-machine{
     height: 350px;
     width: 600px;
-    background-color: #BFCCB5;
-    border: solid 5px #EDC6B1;
+    background-color: #2A2F4F;
+    border: solid 5px #917FB3;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -30,11 +30,13 @@ html{
 #pads-container{
     width: 50%;
     height: 300px;
-    border: solid 1px red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-#display{
+.display{
     width: 40%;
     height: 300px;
-    border: solid 1px red;
 }

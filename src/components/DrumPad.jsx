@@ -2,25 +2,29 @@ import React from "react";
 import '../stylesheets/DrumPad.css'
 import { useState } from "react";
 
-const DrumPad = props => {
+const DrumPad = ({ id, keybind, audio, handleScreen, playAudio }) => {
 
     const [active, setActive] = useState(false);
+
+    const activeButton = () => {
+        setActive(true);
+        setTimeout(() => setActive(false), 100);
+    }
 
     return (
         <div 
             className={`drum-pad ${active ? 'active' : ''}`}
-            id={props.id}
-            onClick={
-                () => 
-                {props.handleScreen(props.id);
-                setActive(true);
-                setTimeout(() => setActive(false), 100);
-                }}>
-            {props.keybind}
+            id={id}
+            onClick={() => {
+                playAudio(audio);
+                handleScreen(id);
+                activeButton();
+            }}>
+            {keybind}
             <audio 
-                id={props.keybind} 
+                id={keybind} 
                 className="clip" 
-                src={props.audio}>
+                src={audio}>
             </audio>
         </div>
     );
